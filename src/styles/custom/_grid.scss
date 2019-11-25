@@ -1,0 +1,22 @@
+$numOfColumns: 16;
+$singleColWidth: 100%/($numOfColumns);
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  .row {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    [class*='col-'] {
+      min-height: 1px;
+    }
+    @for $n from 1 through $numOfColumns {
+      .col-#{$n} {
+        width: $singleColWidth * $n;
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+main {
+  background-color: #ddd;
+  section.container {
+    min-height: calc(100vh - 200px);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: space-around;
+    .row1 {
+      width: 90%;
+      height: 25%;
+      margin: 0 auto;
+      .col-4 {
+        background-color: #123456;
+      }
+    }
+    .row2 {
+      width: 90%;
+      height: 25%;
+      margin: 0 auto;
+      .col-4 {
+        background-color: #123456;
+      }
+    }
+    .row3 {
+      width: 90%;
+      height: 25%;
+      margin: 0 auto;
+      .col-4 {
+        background-color: #123456;
+      }
+    }
+  }
+
+}

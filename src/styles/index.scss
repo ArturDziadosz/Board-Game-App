@@ -1,0 +1,17 @@
+@import './custom/reset';
+@import './custom/variables';
+@import './custom/grid';
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: $fontSize;
+  font-family: $fontText;
+  line-height: $lineHeight;
+}
+
+a {
+  text-decoration: none;
+}

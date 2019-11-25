@@ -1,0 +1,23 @@
+header {
+  height: 100px;
+  background-color: #eee;
+  section.container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    h2 {
+
+    }
+    form {
+      input{
+        width: 400px;
+      }
+      button {
+
+      }
+    }
+  }
+}
