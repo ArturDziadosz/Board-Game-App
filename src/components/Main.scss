@@ -1,35 +1,120 @@
 main {
   background-color: #ddd;
-  section.container {
-    min-height: calc(100vh - 200px);
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-content: space-around;
-    .row1 {
-      width: 90%;
-      height: 25%;
-      margin: 0 auto;
-      .col-4 {
-        background-color: #123456;
-      }
-    }
-    .row2 {
-      width: 90%;
-      height: 25%;
-      margin: 0 auto;
-      .col-4 {
-        background-color: #123456;
-      }
-    }
-    .row3 {
-      width: 90%;
-      height: 25%;
-      margin: 0 auto;
-      .col-4 {
-        background-color: #123456;
-      }
+  position: relative;
+
+  &::before {
+    content: "";
+    background-image: url("../assets/background.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    filter: grayscale(1);
+    @supports (filter: invert(1)) and (background-blend-mode: difference) {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-image: url("../assets/background.jpg"), url("../assets/background.jpg");
+      background-blend-mode: difference;
+      background-position:
+              calc(50% - 1px) calc(50% - 1px),
+              calc(50% + 1px) calc(50% + 1px);
+      filter: brightness(2) invert(1) grayscale(1);
+      box-shadow: inset 0 0 0 1px black;
     }
   }
 
+
+  section.container {
+    min-height: calc(100vh - 200px);
+    position: relative;
+
+    .row {
+      width: 90%;
+      height: 100%;
+      padding: 30px;
+      margin: 0 auto;
+      flex-flow: row wrap;
+      align-items: center;
+      align-content: space-around;
+
+
+      .game {
+        background-color: #123456;
+        background-size: cover;
+        background-position: center;
+        border-radius: 5%;
+        box-shadow: 10px 10px 20px #000;
+        min-height: 300px;
+        flex: 0 0 300px;
+        margin: 0 25px 40px 25px;
+        color: #fff;
+        position: relative;
+        cursor: pointer;
+
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 5%;
+          background: rgb(255,255,255);
+          background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.25) 65%, rgba(0,0,0,1) 90%);
+        }
+
+        p {
+          position: absolute;
+          bottom: 10px;
+          left: 10px;
+          font-size: 1.2em;
+        }
+
+      }
+      button.more {
+        position: absolute;
+        left: calc(50% - 80px);
+        bottom: 20px;
+        background-color: #000;
+        color: #fff;
+      }
+      .start {
+        background-color: #123456;
+        color: #fff;
+        height: 100px;
+      }
+      .big {
+        height: 50vh;
+        background-size: cover;
+        color: #fff;
+      }
+      .show {
+        color: red;
+      }
+      .random {
+        background-color: #123456;
+        color: #fff;
+        height: 100px;
+        margin: 20px;
+      }
+      .top3 {
+        height: 40vh;
+        background-color: #123456;
+        margin: 30px 0;
+        color: #fff;
+      }
+      .kickstarter {
+        height: 100px;
+        background-color: #123456;
+        color:#fff;
+      }
+      .noMatch {
+        background-color: #123456;
+        color: #fff;
+        height: 100px;
+      }
+    }
+  }
 }
+

@@ -1,6 +1,8 @@
+
+
 header {
   height: 100px;
-  background-color: #eee;
+  background-color: #123456;
   section.container {
     height: 100%;
     display: flex;
@@ -9,14 +11,24 @@ header {
     padding-left: 5%;
     padding-right: 5%;
     h2 {
-
+      font-family: 'Chewy', cursive;
+      color: #fff;
+      font-size: 3em;
+      padding-left: 20px;
     }
     form {
+      padding-right: 20px;
       input{
-        width: 400px;
+        width: 600px;
+        font-size: 1.8em;
+        border-radius: 5%;
       }
       button {
-
+        font-size: 1.8em;
+        border-radius: 5%;
+        &:first-of-type {
+          background-color: red;
+        }
       }
     }
   }
