@@ -116,7 +116,7 @@ class Main extends Component {
     }).then(data => {
       const randomNumber = Math.floor(Math.random() * data.games.length) + 1;
       this.setState({
-        recommendationByMechanics: <div className={"col-16 game"} onClick={this.handleMakeBig}
+        recommendationByMechanics: <div className={"col-10 game"} onClick={this.handleMakeBig}
                                         style={{backgroundImage: `url(${data.games[randomNumber].images.medium})`}}>{data.games[randomNumber].year_published ?
           <p>{data.games[randomNumber].name} ({data.games[randomNumber].year_published})</p> :
           <p>{data.games[randomNumber].name}</p>}</div>
@@ -134,7 +134,7 @@ class Main extends Component {
     }).then(data => {
       const randomNumber = Math.floor(Math.random() * data.games.length) + 1;
       this.setState({
-        recommendationByCategories: <div className={"col-16 game"} onClick={this.handleMakeBig}
+        recommendationByCategories: <div className={"col-10 game"} onClick={this.handleMakeBig}
                                          style={{backgroundImage: `url(${data.games[randomNumber].images.medium})`}}>{data.games[randomNumber].year_published ?
           <p>{data.games[randomNumber].name} ({data.games[randomNumber].year_published})</p> :
           <p>{data.games[randomNumber].name}</p>}</div>
@@ -158,7 +158,7 @@ class Main extends Component {
       popularArray.push(data.games[this.genRandomNumber(0, 3)]);
       popularArray.push(data.games[this.genRandomNumber(4, 6)]);
       popularArray.push(data.games[this.genRandomNumber(7, 9)]);
-      console.log(popularArray);
+
       this.setState({
         top3: popularArray
       })
@@ -271,7 +271,7 @@ class Main extends Component {
                     return <div key={game.id} className={"col-4 game"} onClick={this.handleMakeBig}
                                 style={{backgroundImage: `url(${game.images.medium})`}}>{game.year_published ?
                       <p>{game.name} ({game.year_published})</p> : <p>{game.name}</p>}</div>
-                  })}                  <div className={"top3Title"}>Popu<span>lar ga</span>mes!</div>
+                  })}                  <div className={"top3Title title"}>Popu<span>lar ga</span>mes!</div>
                   </div>
                 </div>
               </div>
@@ -279,7 +279,7 @@ class Main extends Component {
 
                 <div className={"col-6 random"}>
                   <div className={"container dashboard"}>
-                    <div className={"randomTitle"}>Roll <span>the</span> dice!</div>
+                    <div className={"title"}>Roll <span>the</span> dice!</div>
                     {
                       !this.state.random ? "Loading" : <div className={"col-10 game"} onClick={this.handleMakeBig}
                                                             style={{backgroundImage: `url(${this.state.random.images.medium})`}}>{this.state.random.year_published ?
@@ -302,7 +302,7 @@ class Main extends Component {
                            style={{backgroundImage: `url(${kickstarter[1].images.medium})`}}>{kickstarter[1].year_published ?
                         <p>{kickstarter[1].name} ({kickstarter[1].year_published})</p> :
                         <p>{kickstarter[1].name}</p>}</div>
-                    </>}<div className={"kickstarterTitle"}>Kick<span>star</span>ter</div>
+                    </>}<div className={"title"}>Kick<span>star</span>ter</div>
                   </div>
                 </div>
               </div>
@@ -329,84 +329,91 @@ class Main extends Component {
               <div className={"row"}>
                 <div className={"col-16 big"}>
                   <div className={"left"}>
-                    <div className={"leftUp"} style={{backgroundImage: `url(${gameData[0].images.large})`}}>
-
+                    <div className={"leftUp"} >
+                      <div className={"leftUpLeft game"} style={{backgroundImage: `url(${gameData[0].images.medium})`}}>{gameData[0].year_published ?
+                        <p>{gameData[0].name} ({gameData[0].year_published})</p> :
+                        <p>{gameData[0].name}</p>}
+                      </div>
+                      <div className={"leftUpMiddle"}>
+                        <ul>
+                          {(gameData[0].min_players && gameData[0].max_players) ?
+                            <li>Min P:{gameData[0].min_players} Max P:{gameData[0].max_players}</li> : null}
+                          {(gameData[0].min_playtime && gameData[0].max_playtime) ?
+                            <li>Min T:{gameData[0].min_playtime} Max T:{gameData[0].max_playtime}</li> : null}
+                          {gameData[0].min_age ? <li>Min A:{gameData[0].min_age}</li> : null}
+                          {gameData[0].url ? <li><a href={gameData[0].url} target={"_blank"}>BGA</a></li> : null}
+                          {gameData[0].primary_publisher ? <li>Publisher: {gameData[0].primary_publisher}</li> : null}
+                          {gameData[0].publishers ? <li>Publishers: {gameData[0].publishers}</li> : null}
+                          {gameData[0].designers ? <li>Designers: {gameData[0].designers}</li> : null}
+                          {gameData[0].developers ? <li>Developers: {gameData[0].developers}</li> : null}
+                          {gameData[0].artists ? <li>Artists: {gameData[0].artists}</li> : null}
+                          {gameData[0].num_user_ratings ? <li>User ratings: {gameData[0].num_user_ratings}</li> : null}
+                          {gameData[0].average_user_rating ?
+                            <li>Avg: {gameData[0].average_user_rating.toFixed(2)}</li> : null}
+                          {gameData[0].official_url ?
+                            <li><a href={gameData[0].official_url} target={"_blank"}>Official</a></li> : null}
+                          {gameData[0].names ? <li>Names: {gameData[0].names}</li> : null}
+                          {gameData[0].rules_url ?
+                            <li><a href={gameData[0].rules_url} target={"_blank"}>Rules</a></li> : null}
+                          {gameData[0].weight_amount ? <li>Weight: {gameData[0].weight_amount}</li> : null}
+                          {gameData[0].weight_units ? <li>{gameData[0].weight_units}</li> : null}
+                          {gameData[0].size_height ? <li>Size: {gameData[0].size_height}</li> : null}
+                          {gameData[0].size_width ? <li>{gameData[0].size_width}</li> : null}
+                          {gameData[0].size_depth ? <li>Depth: {gameData[0].size_depth}</li> : null}
+                          {gameData[0].size_units ? <li>{gameData[0].size_units}</li> : null}
+                        </ul>
+                      </div>
+                      <div className={"leftUpRight"}>
+                        <div className={"mechanics"}>
+                          <ul>
+                            {
+                              gameData[0].mechanics.map(elem => {
+                                return (
+                                  this.converterMechanics(elem.id)
+                                )
+                              })
+                            }
+                          </ul>
+                        </div>
+                        <div className={"categories"}>
+                          <ul>
+                            {
+                              gameData[0].categories.map(elem => {
+                                return (
+                                  this.converterCategories(elem.id)
+                                )
+                              })
+                            }
+                          </ul>
+                        </div>
+                      </div>
                     </div>
                     <div className={"leftDown"}>
-                      <h3>Description</h3>
-                      <div dangerouslySetInnerHTML={{__html: gameData[0].description}}/>
+                      <div className={"descriptionTitle"}>Des<span>crip</span>tion</div>
+                      <div className={"description"} dangerouslySetInnerHTML={{__html: gameData[0].description}}/>
                     </div>
                   </div>
                   <div className={"right"}>
-                    <div className={"rightLeft"}>
-                      <ul>
-                        <li>Name: {gameData[0].name}</li>
-                        {gameData[0].year_published ? <li>Year: {gameData[0].year_published}</li> : null}
-                        {(gameData[0].min_players && gameData[0].max_players) ?
-                          <li>Min P:{gameData[0].min_players} Max P:{gameData[0].max_players}</li> : null}
-                        {(gameData[0].min_playtime && gameData[0].max_playtime) ?
-                          <li>Min T:{gameData[0].min_playtime} Max T:{gameData[0].max_playtime}</li> : null}
-                        {gameData[0].min_age ? <li>Min A:{gameData[0].min_age}</li> : null}
-                        {gameData[0].url ? <li><a href={gameData[0].url} target={"_blank"}>BGA</a></li> : null}
-                        {gameData[0].primary_publisher ? <li>Publisher: {gameData[0].primary_publisher}</li> : null}
-                        {gameData[0].publishers ? <li>Publishers: {gameData[0].publishers}</li> : null}
-                        {gameData[0].designers ? <li>Designers: {gameData[0].designers}</li> : null}
-                        {gameData[0].developers ? <li>Developers: {gameData[0].developers}</li> : null}
-                        {gameData[0].artists ? <li>Artists: {gameData[0].artists}</li> : null}
-                        {gameData[0].num_user_ratings ? <li>User ratings: {gameData[0].num_user_ratings}</li> : null}
-                        {gameData[0].average_user_rating ?
-                          <li>Avg: {gameData[0].average_user_rating.toFixed(2)}</li> : null}
-                        {gameData[0].official_url ?
-                          <li><a href={gameData[0].official_url} target={"_blank"}>Official</a></li> : null}
-                        {gameData[0].names ? <li>Names: {gameData[0].names}</li> : null}
-                        {gameData[0].rules_url ?
-                          <li><a href={gameData[0].rules_url} target={"_blank"}>Rules</a></li> : null}
-                        {gameData[0].weight_amount ? <li>Weight: {gameData[0].weight_amount}</li> : null}
-                        {gameData[0].weight_units ? <li>{gameData[0].weight_units}</li> : null}
-                        {gameData[0].size_height ? <li>Size: {gameData[0].size_height}</li> : null}
-                        {gameData[0].size_width ? <li>{gameData[0].size_width}</li> : null}
-                        {gameData[0].size_depth ? <li>Depth: {gameData[0].size_depth}</li> : null}
-                        {gameData[0].size_units ? <li>{gameData[0].size_units}</li> : null}
-                      </ul>
+                    <div className={"rightTitle"}>
+                      <p className={"banner bannerTop"}>Reco<span>mmenda</span>tions</p>
+                      <div className={"banner dice"}><i className="fas fa-dice"></i></div>
                     </div>
-                    <div className={"rightRight"}>
-                      <div className={"rrTop"}>
-                        <ul>
-                          {
-                            gameData[0].mechanics.map(elem => {
-                              return (
-                                this.converterMechanics(elem.id)
-                              )
-                            })
-                          }
-                        </ul>
-                      </div>
-                      <div className={"rrMiddle"}>
-                        <ul>
-                          {
-                            gameData[0].categories.map(elem => {
-                              return (
-                                this.converterCategories(elem.id)
-                              )
-                            })
-                          }
-                        </ul>
-                      </div>
-                      <div className={"rrBottom"}>
-                        <p>Recomendations</p>
-                        <div>by mechanics</div>
-                        {this.state.recommendationByMechanics}
-                        <div>by categories</div>
-                        {this.state.recommendationByCategories}
-                      </div>
+                    <div className={"rightUp"}>
+                      <div className={"banner"}>by <span>mecha</span>nics</div>
+                      {this.state.recommendationByMechanics}
+                    </div>
+                    <div className={"rightDown"}>
+                      <div className={"banner"}>by <span>catego</span>ries</div>
+                      {this.state.recommendationByCategories}
                     </div>
                   </div>
+                  <button onClick={this.handleMakeSmall} className={"cancel"}><i className="fas fa-eject"/></button>
                 </div>
 
               </div>
             </section>
+
           </main>
-          <button onClick={this.handleMakeSmall}>X</button>
         </>
       )
     }
@@ -428,9 +435,10 @@ class Main extends Component {
               }
               {
                 this.state.isDisabled ?
-                  <button className={"col-2 more"} disabled={true}><a href={"#"}>That's all! Search more?</a></button> :
-                  <button className={"col-2 more"} onClick={this.handleMoreBtn} disabled={false}>More awesome games...</button>
+                  <button className={"col-2 more"} disabled={true}><a href={"#"}>That's <span>all! Search</span> for more?</a></button> :
+                  <button className={"col-2 more"} onClick={this.handleMoreBtn} disabled={false}>More <span>awesome</span> games...</button>
               }
+              <button className={"col-1 more"} disabled={true}><a href={"#"}><i className="fas fa-arrow-circle-up"/></a></button>
             </div>
           </section>
         </main>

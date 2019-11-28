@@ -1,8 +1,13 @@
 @import "../styles/custom/variables";
 
 header {
+  position: fixed;
+  width: 100vw;
+  z-index: 9999;
   height: 100px;
   background-color: $colorMain;
+
+
 
   section.container {
     height: 100%;
