@@ -21,8 +21,15 @@ footer {
       a {
         color: $colorAnchor;
         i {
-          padding: 20px;
+          padding: 0 20px;
           font-size: 2em;
+          transition:  200ms;
+          &:hover {
+            transform: scale(1.4);
+          }
+          &:active {
+            transform: scale(1.4) translateY(2px);
+          }
         }
       }
       .icons {

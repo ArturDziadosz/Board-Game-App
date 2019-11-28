@@ -21,18 +21,29 @@ header {
       font-family: 'Chewy', cursive;
       font-size: 3em;
       padding-left: 20px;
+
       a {
         color: $colorText;
         span {
           color: $colorAnchor;
         }
       }
+      &:hover {
+        a {
+          color: $colorAnchor;
+          span {
+            color: $colorText;
+          }
+        }
+      }
     }
 
     form {
-      padding-right: 20px;
+     margin-right: 20px;
       width: 60%;
       position: relative;
+      background-color: black;
+      border-radius: 50px;
 
       input {
         width: 70%;
@@ -41,8 +52,9 @@ header {
         border: 1px solid black;
         height: 40px;
         padding-left: 20px;
-        &::placeholder {
 
+        &:focus {
+          outline-style: none;
         }
       }
 
@@ -52,23 +64,58 @@ header {
         width: 10%;
         border: 1px solid black;
         height: 40px;
+        background-color: #cdcdcd;
+        cursor: grab;
+        transition: top .4s, box-shadow .4s;
+        position: absolute;
+        box-shadow: 10px 10px black, 9px 9px black, 8px 8px black, 7px 7px black, 6px 6px black, 5px 5px black, 4px 4px black, 3px 3px black, 2px 2px black, 1px 1px black;
+        transform: skew(10deg);
+
+        &:focus {
+          outline-style: none;
+        }
+
 
         &:first-of-type {
-          position: absolute;
-          right: 18px;
-          top: 0;
+          right: 0;
+          top: -10px;
           border-radius: 0 50px 50px 0;
+          z-index: 4;
         }
         &:nth-of-type(2) {
-          background-color: $colorAnchor;
+          top: -10px;
+          right: 180px;
+          z-index: 3;
+
         }
         &:last-of-type {
+          top: -10px;
+          right: 90px;
+          z-index: 3;
 
         }
-      }
 
-      .show {
-        color: $colorAnchor;
+        &:hover {
+          top: -7px;
+          box-shadow: 10px 7px black, 9px 7px black, 8px 7px black, 7px 7px black, 6px 6px black, 5px 5px black, 4px 4px black, 3px 3px black, 2px 2px black, 1px 1px black;
+          z-index: 2;
+        }
+
+        &:active {
+          top: -1px;
+          box-shadow: 10px 1px black, 9px 1px black, 8px 1px black, 7px 1px black, 6px 1px black, 5px 1px black, 4px 1px black, 3px 1px black, 2px 1px black, 1px 1px black;
+          transition: top .2s, box-shadow .2s;
+        }
+
+      }
+      button.pressed {
+        transition: top .2s, box-shadow .2s;
+        top: -3px;
+        box-shadow: 10px 3px black, 9px 3px black, 8px 3px black, 7px 3px black, 6px 3px black, 5px 3px black, 4px 3px black, 3px 3px black, 2px 2px black, 1px 1px black;
+        &:hover {
+          top: -1px;
+          box-shadow: 10px 1px black, 9px 1px black, 8px 1px black, 7px 1px black, 6px 1px black, 5px 1px black, 4px 1px black, 3px 1px black, 2px 1px black, 1px 1px black;
+        }
       }
     }
   }
