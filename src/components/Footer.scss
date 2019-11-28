@@ -1,17 +1,37 @@
+@import "../styles/custom/variables";
+
 footer {
-  height: 100px;
-  background-color: #123456;
+  height: 60px;
+  background-color: $colorMain;
   section {
     padding-left: 5%;
     padding-right: 5%;
     height: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     p {
       font-size: .8em;
       color: #fff;
+      text-align: justify;
+      line-height: 1.1em;
+      &:first-of-type {
+        flex: 0 0 50%;
+      }
       a {
-        color: darken(#fff,25%);
+        color: $colorAnchor;
+        i {
+          padding: 20px;
+          font-size: 2em;
+        }
+      }
+      .icons {
+
+      }
+      span {
+        display: inline-block;
+        margin: 10px;
+        color: $colorAnchor;
       }
     }
   }

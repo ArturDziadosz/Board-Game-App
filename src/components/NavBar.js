@@ -13,11 +13,13 @@ class NavBar extends Component {
     if (this.state.gameName === "") {
       return null
     }
+
     this.props.handleAtParent(this.state.gameName);
     this.setState({
       searchedName: this.state.gameName,
       gameName: ""
-    })
+    });
+    this.props.handleSearch();
   };
 
   handleChange = e => {
@@ -33,16 +35,28 @@ class NavBar extends Component {
     })
   };
 
+  handleReload = e => {
+    e.preventDefault();
+    this.props.handleParentReload();
+  };
+
+  handleExact = e => {
+    e.preventDefault();
+    this.props.handleParentExact();
+    e.target.classList.toggle("show");
+  };
+
   render() {
     return (
       <>
         <header>
           <section className={"container"}>
-            <h2>Board Game App</h2>
+            <h2><a href={"#"} onClick={this.handleReload}>Board <span>Game</span> App</a></h2>
             <form onSubmit={this.handleSubmit} >
-              <input name={"gameName"} type={"text"} value={this.state.gameName} placeholder={(this.state.searchedName === "") ? `Go for it!` : `You searched for: ${this.state.searchedName}`} onChange={this.handleChange}/>
-              <button>Search</button>
-              <button onClick={this.handleClear}>x</button>
+              <input name={"gameName"} type={"text"} value={this.state.gameName} placeholder={(this.state.searchedName === "") ? `Search for awesome games!` : `You searched for: ${this.state.searchedName}`} onChange={this.handleChange}/>
+              <button><i className="fas fa-play"></i></button>
+              <button onClick={this.handleClear}><i className="fas fa-square"></i></button>
+              <button onClick={this.handleExact}><i className="fas fa-circle"></i></button>
             </form>
           </section>
         </header>

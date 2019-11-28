@@ -1,3 +1,5 @@
+@import "../styles/custom/variables";
+
 main {
   background-color: #ddd;
   position: relative;
@@ -17,9 +19,8 @@ main {
       width: 100%;
       background-image: url("../assets/background.jpg"), url("../assets/background.jpg");
       background-blend-mode: difference;
-      background-position:
-              calc(50% - 1px) calc(50% - 1px),
-              calc(50% + 1px) calc(50% + 1px);
+      background-position: calc(50% - 1px) calc(50% - 1px),
+      calc(50% + 1px) calc(50% + 1px);
       filter: brightness(2) invert(1) grayscale(1);
       box-shadow: inset 0 0 0 1px black;
     }
@@ -27,29 +28,30 @@ main {
 
 
   section.container {
-    min-height: calc(100vh - 200px);
+    min-height: calc(100vh - 160px);
     position: relative;
 
     .row {
       width: 90%;
       height: 100%;
-      padding: 30px;
+      padding: 30px 0;
       margin: 0 auto;
       flex-flow: row wrap;
       align-items: center;
       align-content: space-around;
-
+      justify-content: space-around;
 
       .game {
-        background-color: #123456;
-        background-size: cover;
+        //background-color: $colorMain;
+        background-size: contain;
         background-position: center;
+        background-repeat: no-repeat;
         border-radius: 5%;
-        box-shadow: 10px 10px 20px #000;
+        box-shadow: 10px 0 10px #000, -1px -1px 10px #000;
         min-height: 300px;
         flex: 0 0 300px;
-        margin: 0 25px 40px 25px;
-        color: #fff;
+        margin: 0 15px 40px 15px;
+        color: $colorText;
         position: relative;
         cursor: pointer;
 
@@ -60,8 +62,8 @@ main {
           width: 100%;
           height: 100%;
           border-radius: 5%;
-          background: rgb(255,255,255);
-          background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.25) 65%, rgba(0,0,0,1) 90%);
+          background: $colorText;
+          background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .25) 65%, rgba(0, 0, 0, 1) 90%);
         }
 
         p {
@@ -72,49 +74,241 @@ main {
         }
 
       }
+
       button.more {
+        display: block;
         position: absolute;
-        left: calc(50% - 80px);
-        bottom: 20px;
-        background-color: #000;
-        color: #fff;
+        left: calc(50% - 150px);
+        bottom: 8px;
+        background-color: $colorMain;
+        color: $colorAnchor;
+        padding: 15px;
+        border-radius: 50px;
+        box-shadow: 10px 0 10px #000;
+        border: 1px solid #000;
+        cursor: pointer;
+        width: 300px;
+        font-size: 1.2em;
+
+        a {
+          color: $colorAnchor;
+        }
       }
-      .start {
-        background-color: #123456;
-        color: #fff;
-        height: 100px;
-      }
+
       .big {
-        height: 50vh;
+        height: 70vh;
         background-size: cover;
         color: #fff;
-      }
-      .show {
-        color: red;
-      }
-      .random {
-        background-color: #123456;
-        color: #fff;
-        height: 100px;
-        margin: 20px;
-      }
-      .top3 {
-        height: 40vh;
-        background-color: #123456;
-        margin: 30px 0;
-        color: #fff;
-      }
-      .kickstarter {
-        height: 100px;
-        background-color: #123456;
-        color:#fff;
-      }
-      .noMatch {
-        background-color: #123456;
-        color: #fff;
-        height: 100px;
+        display: flex;
+
+        .left {
+          background-color: red;
+          height: 100%;
+          width: 50%;
+
+          .leftUp {
+            background-color: green;
+            height: 50%;
+            width: 100%;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+          }
+        }
+
+        .right {
+          background-color: blue;
+          height: 100%;
+          width: 50%;
+          display: flex;
+
+          .rightRight {
+            height: 100%;
+            width: 50%;
+
+            .rrTop {
+              height: 25%;
+            }
+
+            .rrMiddle {
+              height: 25%;
+            }
+
+            .rrBottom {
+              height: 50%;
+            }
+          }
+
+          .rightLeft {
+            background-color: gray;
+            height: 100%;
+            width: 50%;
+          }
+        }
       }
     }
+
+    .rowStart {
+      padding-top: 20px;
+      padding-bottom: 0;
+
+      .start {
+        background-color: $colorMain;
+        color: $colorText;
+        height: 96px;
+        padding: 10px;
+        text-align: center;
+        line-height: 1.2em;
+        overflow: auto;
+        width: 70%;
+        border-radius: 50px;
+        box-shadow: 5px 5px 5px #000;
+        margin-bottom: 25px;
+
+        a {
+          color: $colorAnchor;
+        }
+      }
+
+      .top3 {
+
+        .dashboard {
+          display: flex;
+          width: 90%;
+          margin: 0 auto;
+          flex-wrap: wrap-reverse;
+          justify-content: center;
+          position: relative;
+
+          .game {
+            margin-bottom: 10px;
+          }
+
+          .top3Title {
+            font-family: $fontLogo;
+            height: 100px;
+            width: 300px;
+            background-color: $colorMain;
+            border-radius: 5%;
+            box-shadow: -5px 10px 10px #000;
+            transform: rotate(-90deg);
+            color: $colorText;
+            position: absolute;
+            left: -140px;
+            top: 100px;
+            text-align: center;
+            font-size: 2.5em;
+            line-height: 2.5em;
+
+            span {
+              color: $colorAnchor;
+            }
+          }
+        }
+
+
+      }
+
+      .noMatch {
+        background-color: $colorMain;
+        color: $colorText;
+        height: 96px;
+        padding: 10px;
+        text-align: center;
+        line-height: 1.4em;
+        overflow: auto;
+        border-radius: 50px;
+        box-shadow: 5px 5px 5px #000;
+        margin-bottom: 25px;
+        width: 50%;
+
+        span {
+          color: $colorAnchor;
+          font-size: 1.2em;
+        }
+      }
+    }
+
+    .rowKickstarter {
+      padding-top: 15px;
+      padding-bottom: 10px;
+      justify-content: center;
+
+      .random {
+        min-width: 400px;
+
+        .dashboard {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: flex-end;
+          position: relative;
+
+          .game {
+            margin-bottom: 10px;
+          }
+
+          .randomTitle {
+            font-family: $fontLogo;
+            height: 100px;
+            width: 300px;
+            background-color: $colorMain;
+            border-radius: 5%;
+            box-shadow: -5px 10px 10px #000;
+            transform: rotate(-90deg);
+            color: $colorText;
+            position: absolute;
+            left: -75px;
+            top: 100px;
+            text-align: center;
+            font-size: 2.5em;
+            line-height: 2.5em;
+            span {
+              color: $colorAnchor;
+            }
+
+          }
+        }
+      }
+
+      .kickstarter {
+        min-width: 400px;
+
+        .dashboard {
+          display: flex;
+          flex-wrap: wrap-reverse;
+          justify-content: flex-end;
+          position: relative;
+
+          .game {
+            margin-bottom: 10px;
+          }
+
+          .kickstarterTitle {
+            font-family: $fontLogo;
+            height: 100px;
+            width: 300px;
+            background-color: $colorMain;
+            border-radius: 5%;
+            box-shadow: -5px 10px 10px #000;
+            transform: rotate(-90deg);
+            color: $colorText;
+            position: absolute;
+            left: -75px;
+            top: 100px;
+            text-align: center;
+            font-size: 2.5em;
+            line-height: 2.5em;
+            span {
+              color: $colorAnchor
+            }
+          }
+        }
+      }
+    }
+
+
   }
+
 }
+
 

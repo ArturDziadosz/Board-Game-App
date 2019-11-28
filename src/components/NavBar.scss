@@ -1,8 +1,9 @@
-
+@import "../styles/custom/variables";
 
 header {
   height: 100px;
-  background-color: #123456;
+  background-color: $colorMain;
+
   section.container {
     height: 100%;
     display: flex;
@@ -10,25 +11,59 @@ header {
     align-items: center;
     padding-left: 5%;
     padding-right: 5%;
+
     h2 {
       font-family: 'Chewy', cursive;
-      color: #fff;
       font-size: 3em;
       padding-left: 20px;
+      a {
+        color: $colorText;
+        span {
+          color: $colorAnchor;
+        }
+      }
     }
+
     form {
       padding-right: 20px;
-      input{
-        width: 600px;
-        font-size: 1.8em;
-        border-radius: 5%;
-      }
-      button {
-        font-size: 1.8em;
-        border-radius: 5%;
-        &:first-of-type {
-          background-color: red;
+      width: 60%;
+      position: relative;
+
+      input {
+        width: 70%;
+        font-size: 1.5em;
+        border-radius: 50px 0 0 50px;
+        border: 1px solid black;
+        height: 40px;
+        padding-left: 20px;
+        &::placeholder {
+
         }
+      }
+
+      button {
+        font-size: 1.5em;
+        border-radius: 5%;
+        width: 10%;
+        border: 1px solid black;
+        height: 40px;
+
+        &:first-of-type {
+          position: absolute;
+          right: 18px;
+          top: 0;
+          border-radius: 0 50px 50px 0;
+        }
+        &:nth-of-type(2) {
+          background-color: $colorAnchor;
+        }
+        &:last-of-type {
+
+        }
+      }
+
+      .show {
+        color: $colorAnchor;
       }
     }
   }

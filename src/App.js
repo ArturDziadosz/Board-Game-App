@@ -8,17 +8,21 @@ class App extends Component {
     gameName: "",
     api: "https://www.boardgameatlas.com/api/search?client_id=GNWr07oYDD",
     data: false,
-    skip: 0
+    skip: 0,
+    isExact: false,
+    isSearched: false,
+    searchCount: 0
   };
 
 
   fetchData = (gameName) => {
     this.setState({
       gameName,
-      skip: 0
+      skip: 0,
+      searchCount: this.state.searchCount + 1
     }, () => {
 
-      fetch(`${this.state.api}&name=${this.state.gameName}&limit=6`).then(resp => {
+      fetch(`${this.state.api}&name=${this.state.gameName}&limit=6&exact=${this.state.isExact}`).then(resp => {
         if (resp.ok) {
           return resp.json();
         } else {
@@ -52,11 +56,37 @@ class App extends Component {
     });
   };
 
+  reload = () => {
+    this.setState({
+      gameName: "",
+      api: "https://www.boardgameatlas.com/api/search?client_id=GNWr07oYDD",
+      data: false,
+      skip: 0
+    })
+  };
+
+  exact = () => {
+    this.setState(state => {
+      return {
+        isExact: !state.isExact
+      };
+    })
+  };
+
+  search = () => {
+      this.setState(state => {
+        return {
+          isSearched: !state.isSearched,
+          searchCount: 1
+        };
+      })
+  };
+
   render() {
     return (
       <>
-        <NavBar handleAtParent={this.fetchData}/>
-        <Main gameData={this.state.data} skip={this.state.skip} gameName={this.state.gameName} handlePageCounter={this.fetchNextData} />
+        <NavBar handleAtParent={this.fetchData} handleParentReload={this.reload} handleParentExact={this.exact} handleSearch={this.search}/>
+        <Main gameData={this.state.data} skip={this.state.skip} gameName={this.state.gameName} api={this.state.api} searchCount={this.state.searchCount} exact={this.state.isExact} searched={this.state.isSearched} handlePageCounter={this.fetchNextData} handleMakeBig={this.fetchData} handleMakeSmall={this.reload}/>
         <Footer/>
       </>
     )
