@@ -44,7 +44,7 @@ class NavBar extends Component {
     e.preventDefault();
     this.props.handleParentExact();
     console.log(e.target);
-    e.target.classList.toggle("pressed");
+    e.currentTarget.classList.toggle("pressed");
   };
 
   render() {
