@@ -33,13 +33,13 @@ footer {
         }
       }
       .icons {
+        span {
+          display: inline-block;
+          margin: 10px;
+          color: $colorAnchor;
+        }
+      }
 
-      }
-      span {
-        display: inline-block;
-        margin: 10px;
-        color: $colorAnchor;
-      }
     }
   }
 }

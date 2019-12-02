@@ -1,0 +1,122 @@
+@media screen and (max-width: 1100px) {
+  .container {
+    max-width: 800px;
+  }
+  header {
+    height: 80px;
+
+    section.container {
+      h2 {
+        font-size: 2.5em;
+      }
+
+      form {
+        input {
+          font-size: 1em;
+          height: 30px;
+        }
+
+        button {
+          font-size: 1em;
+          height: 30px;
+
+          &:nth-of-type(2) {
+            right: 116px;
+          }
+
+          &:last-of-type {
+            right: 58px;
+          }
+        }
+      }
+    }
+  }
+  main {
+    section.container {
+      padding-top: 80px;
+      .rowStart {
+        .start {
+          width: 100%;
+          font-size: .8em;
+          height: 80px;
+        }
+
+        .noMatch {
+          width: 80%;
+          font-size: .8em;
+          height: 80px;
+        }
+
+        .top3 {
+          .dashboard {
+            justify-content: flex-end;
+
+            .top3Title {
+              left: -160px;
+            }
+          }
+        }
+      }
+
+      .rowKickstarter {
+        .random {
+          width: 100%;
+
+          .dashboard {
+            justify-content: center;
+
+            .randomTitle {
+              left: -25px;
+              &:hover {
+                transform: translateX(-50px) translateY(30px);
+                width: 250px;
+              }
+            }
+          }
+        }
+
+        .kickstarter {
+          width: 100%;
+
+          .dashboard {
+            justify-content: flex-end;
+
+            .title {
+              left: -160px;
+            }
+          }
+        }
+      }
+    }
+  }
+  footer {
+    section.container {
+      padding-right: 0;
+      padding-left: 0;
+
+      p {
+        &:first-of-type {
+          font-size: .6em;
+        }
+
+        &:nth-of-type(2) {
+          a {
+            //font-size: .8em;
+          }
+        }
+
+        &:last-of-type {
+          font-size: .8em;
+          span {
+            &:first-of-type {
+              display: none;
+            }
+            &:last-of-type {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}

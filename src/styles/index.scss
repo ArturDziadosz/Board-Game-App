@@ -17,3 +17,11 @@ html {
 a {
   text-decoration: none;
 }
+
+@import "custom/RWD/desktopsMax1400px";
+@import "custom/RWD/desktopsMax1100px";
+@import "custom/RWD/desktopMax900px";
+@import "custom/RWD/tablets";
+@import "custom/RWD/tabletsNarrowMax600px";
+@import "custom/RWD/mobileWide";
+@import "custom/RWD/mobileNarrow";

@@ -1,0 +1,152 @@
+@media screen and (max-width: 320px) {
+  .container {
+    max-width: 280px;
+  }
+  header {
+    section.container {
+      h2 {
+      }
+
+      form {
+        input {
+        }
+
+        button {
+
+          &:hover {
+          }
+
+          &:first-of-type {
+            &:active {
+            }
+          }
+
+          &:nth-of-type(2) {
+            right: 64px;
+            &:active {
+            }
+          }
+
+          &:last-of-type {
+            right: 32px;
+          }
+
+        }
+        button.pressed {
+          &:hover {
+          }
+        }
+      }
+    }
+  }
+  main {
+    section.container {
+      .row {
+        .game {
+          min-height: 230px;
+          flex: 0 0 230px;
+        }
+
+        button.more {
+          &:first-of-type {
+
+          }
+          &:last-of-type {
+
+            width: 55px;
+          }
+          a {
+            padding: 7px;
+          }
+        }
+      }
+      .rowStart {
+
+        .start {
+          width: 90%;
+          padding: 10px;
+          span {
+            &:first-of-type {
+            }
+            &:nth-of-type(2) {
+            }
+            &:last-of-type {
+            }
+          }
+        }
+
+        .top3 {
+          .dashboard {
+            .top3Title {
+              width: 250px;
+            }
+          }
+        }
+        .noMatch {
+          width: 90%;
+          min-height: 111px;
+        }
+      }
+
+      .rowKickstarter {
+        .random {
+          .dashboard {
+
+
+            .randomTitle {
+              width: 250px;
+
+              &:hover {
+
+                &::before {
+                }
+              }
+
+              &:active {
+
+              }
+            }
+          }
+        }
+
+        .kickstarter {
+
+
+          .dashboard {
+
+
+            .title {
+              width: 250px;
+            }
+          }
+        }
+      }
+    }
+  }
+  footer {
+    section.container {
+      width: 95%;
+      p {
+        &:first-of-type {
+
+          padding: 80px 0 10px 0;
+        }
+
+        &:nth-of-type(2) {
+          font-size: .6em;
+          display: flex;
+          justify-content: center;
+          padding: 5px;
+          a {
+            i {
+              padding: 0 5px;
+            }
+          }
+        }
+
+        &:last-of-type {
+        }
+      }
+    }
+  }
+}

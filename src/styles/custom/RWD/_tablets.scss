@@ -1,0 +1,172 @@
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 600px;
+  }
+  header {
+    height: 60px;
+
+    section.container {
+      h2 {
+        font-size: 1.5em;
+      }
+
+      form {
+        width: 60%;
+        input {
+          height: 25px;
+          font-size: .8em;
+        }
+
+        button {
+          height: 25px;
+          font-size: .8em;
+          box-shadow: 7px 7px black, 6px 6px black, 5px 5px black, 4px 4px black, 3px 3px black, 2px 2px black, 1px 1px black;
+          width: 10%;
+
+          &:hover {
+            top: -7px;
+            box-shadow: 7px 7px black, 6px 6px black, 5px 5px black, 4px 4px black, 3px 3px black, 2px 2px black, 1px 1px black;
+          }
+
+          &:first-of-type {
+            top: -7px;
+            &:active {
+              top: -1px;
+              box-shadow: 7px 1px black, 6px 1px black, 5px 1px black, 4px 1px black, 3px 1px black, 2px 1px black, 1px 1px black;
+            }
+          }
+
+          &:nth-of-type(2) {
+            top: -7px;
+            height: 25px;
+            right: 86px;
+            &:active {
+              top: -1px;
+              box-shadow: 7px 1px black, 6px 1px black, 5px 1px black, 4px 1px black, 3px 1px black, 2px 1px black, 1px 1px black;
+            }
+          }
+
+          &:last-of-type {
+            top: -7px;
+            height: 25px;
+            right: 43px;
+          }
+
+        }
+        button.pressed {
+          top: -1px;
+          box-shadow: 7px 1px black, 6px 1px black, 5px 1px black, 4px 1px black, 3px 1px black, 2px 1px black, 1px 1px black;
+          &:hover {
+            top: -1px;
+            box-shadow: 7px 1px black, 6px 1px black, 5px 1px black, 4px 1px black, 3px 1px black, 2px 1px black, 1px 1px black;
+          }
+        }
+      }
+    }
+  }
+  main {
+    section.container {
+      padding-top: 60px;
+      .row {
+        .game {
+          min-height: 250px;
+          flex: 0 0 250px;
+        }
+        button {
+          &:last-of-type {
+
+          }
+        }
+      }
+      .rowStart {
+
+        .start {
+          height: 170px;
+          width: 85%;
+          span {
+            &:first-of-type {
+              display: block;
+            }
+            &:nth-of-type(2) {
+              display: block;
+            }
+            &:last-of-type {
+              display: block;
+            }
+          }
+        }
+        .noMatch {
+          font-size: .7em;
+        }
+
+        .top3 {
+          .dashboard {
+            .top3Title {
+            }
+          }
+        }
+      }
+
+      .rowKickstarter {
+        .random {
+          .dashboard {
+
+
+            .randomTitle {
+              width: 250px;
+              left: -25px;
+              top: 95px;
+
+              &:hover {
+                border-bottom: 5px black outset;
+                width: 200px;
+                transform: translateX(-30px) translateY(30px);
+
+                &::before {
+                }
+              }
+
+              &:active {
+              }
+            }
+          }
+        }
+
+        .kickstarter {
+
+
+          .dashboard {
+
+
+            .title {
+            }
+          }
+        }
+      }
+    }
+  }
+  footer {
+    section.container {
+
+
+      p {
+        &:first-of-type {
+
+        }
+
+        &:nth-of-type(2) {
+          //font-size: .6em;
+          a {
+            i {
+
+            }
+          }
+        }
+
+        &:last-of-type {
+          font-size: .6em;
+        }
+      }
+    }
+  }
+}

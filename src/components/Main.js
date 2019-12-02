@@ -215,16 +215,14 @@ class Main extends Component {
             <section className={"container"}>
               <div className={"row rowStart"}>
                 {!gameData ?
-                  <div className={"col-16 start"}>Hi! My name is Artur Dziadosz. I'm a trainee Front-end developer and
-                    board game geek. <br/> I made this site just for a training purpose. It's a simple search site based
+                  <div className={"col-16 start"}>Hi! My name is Artur Dziadosz. <span>I'm a Junior Front-end developer and
+                    board game geek. </span><br/> I made this site just for a training purpose. <span>It's a simple search site based
                     on great <a href={"https://www.boardgameatlas.com/"} target={"_blank"}>Board Game Atlas
-                      API</a>. <br/>It
-                    has small features including: most popular games, kickstarter games, random game, recommended
-                    games.<br/> I hope you will enjoy it! May the best game be with you!
+                      API</a>.</span> <br/>It has small features including: <span>most popular games, kickstarter games, random game, recommended
+                    games.</span><br/> I hope you will enjoy it! May the best game be with you!
                   </div> :
                   <div className={"col-16 noMatch"}><span>Upssssssssss :(</span> <br/> No matching criteria for searched
-                    sentence: "{this.props.gameName}". <br/> If you are using exact search be aware of first capital
-                    letter in searched word. <br/></div>}
+                    sentence: "{this.props.gameName}". <br/> If you are using exact search be aware of first letter in searched word it should be capitalized. <br/></div>}
 
                 <div className={"col-16 top3"}>
                   <div className={"dashboard"}>{!this.state.top3 ? <div className={"col-16 rotate"} style={{display: "flex", justifyContent: "center", alignItems: "center", height: "300px", fontSize: "10em"}}>
@@ -241,7 +239,7 @@ class Main extends Component {
 
                 <div className={"col-6 random"}>
                   <div className={"container dashboard"}>
-                    <div className={"title"} onClick={this.fetchRandomGame}>Roll <span>the</span> dice!</div>
+                    <div className={"title randomTitle"} onClick={this.fetchRandomGame}>Roll <span>the</span> dice!</div>
                     {
                       !this.state.random ? <div className={"col-16 rotate"} style={{display: "flex", justifyContent: "center", alignItems: "center", height: "300px", fontSize: "10em"}}>
                         <i className="fas fa-dice-five" style={{color: "#123456"}}></i></div> : <div className={"col-10 game"} onClick={this.handleMakeBig}
@@ -419,7 +417,7 @@ class Main extends Component {
                   <button className={"col-2 more"} disabled={true}><a href={"#"}>That's <span>all! Search</span> for
                     more?</a></button> :
                   <button className={"col-2 more"} onClick={this.handleMoreBtn}
-                          disabled={false}>More <span>awesome</span> games...</button>
+                          disabled={false}><a>More <span>awesome</span> games...</a></button>
               }
               <button className={"col-1 more"} disabled={true}><a href={"#"}><i className="fas fa-arrow-circle-up"/></a>
               </button>

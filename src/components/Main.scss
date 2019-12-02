@@ -4,6 +4,7 @@
 main {
   background-color: #ddd;
   position: relative;
+  overflow: hidden;
 
   &::before {
     content: "";
@@ -32,6 +33,9 @@ main {
     min-height: calc(100vh - 63px);
     padding-top: 100px;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     .row {
       width: 90%;
@@ -63,7 +67,7 @@ main {
         transition: translate 200ms;
 
         &:hover {
-          animation: shake 2s infinite alternate;
+          animation: shake 2s infinite alternate !important;
         }
 
         &:active {
@@ -98,11 +102,18 @@ main {
         bottom: 8px;
         background-color: $colorMain;
         color: $colorText;
-        padding: 10px;
+        //padding: 10px;
         border-radius: 50px;
         box-shadow: 10px 5px 10px #000, -1px -1px 10px #000;
         cursor: pointer;
         font-size: 1.2em;
+
+        a {
+          display: block;
+          width: 100%;
+          height: 100%;
+          padding: 10px;
+        }
 
         &:first-of-type {
           font-family: $fontLogo;
@@ -390,7 +401,7 @@ main {
       }
 
       .top3 {
-        animation: fadeIn 1s linear;
+        animation: fadeIn 2s linear;
 
         .dashboard {
           display: flex;
@@ -402,6 +413,7 @@ main {
 
           .game {
             margin-bottom: 10px;
+            animation: shake 2s alternate;
           }
 
           .top3Title {
@@ -424,7 +436,7 @@ main {
         box-shadow: 5px 5px 5px #000;
         margin-bottom: 25px;
         width: 50%;
-        animation: error reverse infinite 1s ease-in-out;
+        animation: error reverse infinite 2s ease-in-out;
 
         span {
           color: $colorAnchor;
@@ -438,7 +450,7 @@ main {
       padding-top: 15px;
       padding-bottom: 10px;
       justify-content: center;
-      animation: fadeInReverse 1s linear;
+      animation: fadeInReverse 2s linear;
 
       .random {
         min-width: 400px;
@@ -451,6 +463,8 @@ main {
 
           .game {
             margin-bottom: 10px;
+            animation: shake 2s alternate;
+
           }
 
         }
@@ -467,6 +481,7 @@ main {
 
           .game {
             margin-bottom: 10px;
+            animation: shake 2s alternate;
           }
         }
       }
@@ -487,6 +502,8 @@ main {
       text-align: center;
       font-size: 2.5em;
       line-height: 2.5em;
+      transition: 1s;
+      animation: shakeRotate 3s alternate;
 
       span {
         color: $colorAnchor;
@@ -512,8 +529,11 @@ main {
           }
         }
         &:active {
-          animation: btnRoll 100ms linear reverse forwards;
-          box-shadow: none;
+          transform: translateY(40px) translateX(-70px);
+          border-bottom: 0 darken($colorMain,50%) outset;
+          box-shadow: 0 10px 0 darken($colorMain,50%) inset;
+          transition: 100ms;
+          color: $colorAnchor;
         }
       }
 

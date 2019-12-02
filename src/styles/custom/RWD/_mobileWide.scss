@@ -1,0 +1,142 @@
+@media screen and (max-width: 425px) {
+  .container {
+    max-width: 320px;
+  }
+  header {
+    section.container {
+      h2 {
+      }
+
+      form {
+        input {
+        }
+
+        button {
+
+          &:hover {
+          }
+
+          &:first-of-type {
+            &:active {
+            }
+          }
+
+          &:nth-of-type(2) {
+            right: 72px;
+            &:active {
+            }
+          }
+
+          &:last-of-type {
+            right: 36px;
+          }
+
+        }
+        button.pressed {
+          &:hover {
+          }
+        }
+      }
+    }
+  }
+  main {
+    section.container {
+      .row {
+        .game {
+        }
+        button.more {
+          &:first-of-type {
+            width: 210px;
+            left: calc(50% - 140px);
+          }
+          &:last-of-type {
+            left: calc(50% + 80px);
+          }
+        }
+      }
+      .rowStart {
+
+        .start {
+          padding: 15px;
+          span {
+            &:first-of-type {
+            }
+            &:nth-of-type(2) {
+            }
+            &:last-of-type {
+            }
+          }
+        }
+
+        .noMatch {
+          height: 100px;
+        }
+
+        .top3 {
+          .dashboard {
+            .top3Title {
+            }
+          }
+        }
+      }
+
+      .rowKickstarter {
+        .random {
+          .dashboard {
+
+
+            .randomTitle {
+
+              &:hover {
+
+                &::before {
+                }
+              }
+
+              &:active {
+
+              }
+            }
+          }
+        }
+
+        .kickstarter {
+
+
+          .dashboard {
+
+
+            .title {
+            }
+          }
+        }
+      }
+    }
+  }
+  footer {
+    section.container {
+
+      p {
+        &:first-of-type {
+
+          padding: 50px 0 10px 0;
+        }
+
+        &:nth-of-type(2) {
+          font-size: .6em;
+          display: flex;
+          justify-content: center;
+          padding: 5px;
+          a {
+            i {
+              padding: 0 5px;
+            }
+          }
+        }
+
+        &:last-of-type {
+        }
+      }
+    }
+  }
+}

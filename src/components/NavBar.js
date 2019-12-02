@@ -54,7 +54,7 @@ class NavBar extends Component {
           <section className={"container"}>
             <h2><a href={"#"} onClick={this.handleReload}>Board <span>Game</span> App</a></h2>
             <form onSubmit={this.handleSubmit} >
-              <input name={"gameName"} type={"text"} value={this.state.gameName} placeholder={(this.state.searchedName === "") ? `Search for awesome games!` : `You searched for: ${this.state.searchedName}`} onChange={this.handleChange}/>
+              <input id="placeholder" name={"gameName"} type={"text"} value={this.state.gameName} placeholder={(this.state.searchedName === "") ? `Search for awesome games!` : `You searched for: ${this.state.searchedName}`} onChange={this.handleChange}/>
               <button><i className="fas fa-play"/></button>
               <button onClick={this.handleClear}><i className="fas fa-square"/></button>
               <button onClick={this.handleExact}><i className="fas fa-circle"/></button>

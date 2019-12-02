@@ -1,0 +1,147 @@
+@media screen and (max-width: 900px) {
+  .container {
+    max-width: 700px;
+  }
+  header {
+    height: 60px;
+
+    section.container {
+      h2 {
+        font-size: 2em;
+      }
+
+      form {
+        input {
+          height: 25px;
+          font-size: .8em;
+        }
+
+        button {
+          height: 25px;
+          font-size: .8em;
+
+          &:nth-of-type(2) {
+            height: 25px;
+            right: 104px;
+          }
+
+          &:last-of-type {
+            height: 25px;
+            right: 52px;
+          }
+        }
+      }
+    }
+  }
+  main {
+    section.container {
+      padding-top: 60px;
+
+      .rowStart {
+        width: 95%;
+
+        .start {
+        }
+        .noMatch {
+          height: 90px;
+        }
+
+        .top3 {
+          .dashboard {
+            justify-content: center;
+
+            .top3Title {
+              position: static;
+              height: 60px;
+              top: 0;
+              font-size: 2em;
+              line-height: 2em;
+              transform: none;
+              animation: shake 2s alternate;
+              margin-bottom: 25px;
+            }
+          }
+        }
+      }
+
+      .rowKickstarter {
+        width: 95%;
+
+        .random {
+
+
+          .dashboard {
+
+
+            .randomTitle {
+              height: 60px;
+              font-size: 2em;
+              line-height: 2em;
+              left: -25px;
+              top: 120px;
+
+              &:hover {
+                border-bottom: 5px black outset;
+                width: 200px;
+                transform: translateX(0px) translateY(30px);
+
+                &::before {
+                  width: 80px;
+                  height: 80px;
+                  animation: rollingDice2 linear infinite 3s;
+                }
+              }
+
+              &:active {
+                border-bottom: 0 black outset;
+                box-shadow: 0 5px 0 black inset;
+              }
+            }
+          }
+        }
+
+        .kickstarter {
+
+
+          .dashboard {
+            justify-content: center;
+
+            .title {
+              position: static;
+              height: 60px;
+              top: 0;
+              font-size: 2em;
+              line-height: 2em;
+              transform: none;
+              animation: shake 2s alternate;
+              margin-bottom: 25px;
+            }
+          }
+        }
+      }
+    }
+  }
+  footer {
+    section.container {
+
+
+      p {
+        &:first-of-type {
+
+        }
+
+        &:nth-of-type(2) {
+          a {
+            i {
+              padding: 0 10px;
+
+            }
+          }
+        }
+
+        &:last-of-type {
+        }
+      }
+    }
+  }
+}

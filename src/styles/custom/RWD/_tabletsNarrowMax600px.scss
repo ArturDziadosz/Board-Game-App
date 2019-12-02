@@ -1,0 +1,166 @@
+@media screen and (max-width: 600px) {
+  .container {
+    max-width: 425px;
+  }
+  header {
+    padding: 12px 0;
+    height: 90px;
+    section.container {
+      flex-direction: column;
+      h2 {
+      }
+
+      form {
+        width: 90%;
+        input {
+        }
+
+        button {
+          font-size: .8em;
+          width: 10%;
+
+          &:hover {
+          }
+
+          &:first-of-type {
+            &:active {
+            }
+          }
+
+          &:nth-of-type(2) {
+            right: 90px;
+            &:active {
+            }
+          }
+
+          &:last-of-type {
+            right: 45px;
+          }
+
+        }
+        button.pressed {
+          &:hover {
+          }
+        }
+      }
+    }
+  }
+  main {
+    section.container {
+      padding-top: 90px;
+      .row {
+        .game {
+        }
+        button.more {
+          &:first-of-type {
+            width: 250px;
+            left: calc(50% - 150px);
+          }
+        }
+      }
+      .rowStart {
+
+        .start {
+          height: 110px;
+          width: 100%;
+          span {
+            &:first-of-type {
+              display: block;
+            }
+            &:nth-of-type(2) {
+              display: block;
+            }
+            &:last-of-type {
+              display: block;
+            }
+          }
+        }
+
+        .noMatch {
+          width: 100%;
+          padding: 10px 15px;
+          height: 90px;
+        }
+
+        .top3 {
+          .dashboard {
+            .top3Title {
+            }
+          }
+        }
+      }
+
+      .rowKickstarter {
+        .random {
+          .dashboard {
+
+
+            .randomTitle {
+              position: static;
+              height: 60px;
+              top: 0;
+              font-size: 2em;
+              line-height: 2em;
+              transform: none;
+              animation: shake 2s alternate;
+              margin-bottom: 25px;
+              width: 300px;
+
+              &:hover {
+                border-bottom: none;
+                box-shadow: -5px 10px 10px #000;
+                width: 300px;
+                transform: translateX(0) translateY(0);
+
+                &::before {
+                  animation: rollingDice3 linear infinite 3s;
+                }
+              }
+
+              &:active {
+                animation: error 1s reverse;
+              }
+            }
+          }
+        }
+
+        .kickstarter {
+
+
+          .dashboard {
+
+
+            .title {
+            }
+          }
+        }
+      }
+    }
+  }
+  footer {
+    section.container {
+      overflow: scroll;
+
+      p {
+        &:first-of-type {
+          display: block;
+          padding: 30px 0 10px 0;
+        }
+
+        &:nth-of-type(2) {
+          font-size: .6em;
+          a {
+            i {
+              padding: 0 5px;
+            }
+          }
+        }
+
+        &:last-of-type {
+          font-size: .6em;
+          text-align: left;
+        }
+      }
+    }
+  }
+}
