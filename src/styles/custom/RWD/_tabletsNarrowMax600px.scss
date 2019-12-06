@@ -5,13 +5,16 @@
   header {
     padding: 12px 0;
     height: 90px;
+
     section.container {
       flex-direction: column;
+
       h2 {
       }
 
       form {
         width: 90%;
+
         input {
         }
 
@@ -29,6 +32,7 @@
 
           &:nth-of-type(2) {
             right: 90px;
+
             &:active {
             }
           }
@@ -38,6 +42,7 @@
           }
 
         }
+
         button.pressed {
           &:hover {
           }
@@ -48,28 +53,98 @@
   main {
     section.container {
       padding-top: 90px;
+
       .row {
         .game {
         }
+
         button.more {
           &:first-of-type {
             width: 250px;
             left: calc(50% - 150px);
           }
         }
+
+        .big {
+
+          .left {
+            .leftUp {
+
+              .leftUpLeft {
+
+              }
+
+              .leftUpMiddle {
+              }
+
+              .leftUpRight {
+                width: 44%;
+              }
+            }
+
+            .leftDown {
+              margin: 10px;
+            }
+          }
+
+          .right {
+            flex-direction: column;
+
+            .rightTitle {
+
+              .bannerTop {
+                top: -356px;
+                left: 67px;
+              }
+
+              .diceSmall {
+                top: -326px;
+                left: 10px;
+              }
+            }
+
+            .rightUp {
+
+              .banner {
+                top: -60px;
+                left: 67px;
+              }
+            }
+
+            .rightDown {
+              margin-top: 70px;
+
+              .banner {
+                top: -60px;
+                left: 67px;
+              }
+            }
+
+            .game {
+            }
+          }
+
+          .cancel {
+
+          }
+        }
       }
+
       .rowStart {
 
         .start {
           height: 110px;
           width: 100%;
+
           span {
             &:first-of-type {
               display: block;
             }
+
             &:nth-of-type(2) {
               display: block;
             }
+
             &:last-of-type {
               display: block;
             }
@@ -139,16 +214,18 @@
   }
   footer {
     section.container {
-      overflow: scroll;
+
 
       p {
         &:first-of-type {
           display: block;
           padding: 30px 0 10px 0;
+          overflow: scroll;
         }
 
         &:nth-of-type(2) {
           font-size: .6em;
+
           a {
             i {
               padding: 0 5px;

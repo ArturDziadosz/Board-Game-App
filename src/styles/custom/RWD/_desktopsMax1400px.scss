@@ -28,6 +28,55 @@
             width: 65px;
           }
         }
+        .big {
+          flex-direction: column;
+          height: auto;
+          .left {
+            width: 100%;
+            .leftDown {
+              .description {
+                padding: 0;
+              }
+            }
+          }
+          .right {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            padding: 90px 0 10px;
+            .rightTitle {
+              position: absolute;
+              .bannerTop {
+                top: -100px;
+                left: calc(50% - 150px);
+                box-shadow: 5px 10px 10px #000;
+              }
+              .diceSmall {
+                top: -100px;
+                left: calc(50% - 250px)
+              }
+            }
+            .rightUp {
+              flex: 0 0 45%;
+              .banner {
+                left: -115px;
+              }
+            }
+            .rightDown {
+              flex: 0 0 45%;
+              .banner {
+                left: -115px;
+              }
+            }
+            .game {
+              margin-bottom: 0;
+            }
+          }
+          .cancel {
+            width: 100%;
+            border-radius: 0 0 50px 50px;
+          }
+        }
       }
       .rowStart {
         .start {

@@ -33,7 +33,62 @@
   }
   main {
     section.container {
+      .row {
+        padding: 25px 0;
+        .big {
+
+          .left {
+          }
+
+          .right {
+            padding-top: 180px;
+
+            .rightTitle {
+
+              .bannerTop {
+
+                top: -190px;
+              }
+
+              .diceSmall {
+                top: -190px;
+              }
+            }
+
+            .rightUp {
+
+              .banner {
+                left: 10px;
+                top: -96px;
+                transform: rotate(0);
+                box-shadow: 5px 10px 10px #000;
+              }
+            }
+
+            .rightDown {
+
+
+              .banner {
+                left: 10px;
+                top: -96px;
+                transform: rotate(0);
+                box-shadow: 5px 10px 10px #000;
+              }
+            }
+
+            .game {
+
+            }
+          }
+
+          .cancel {
+
+          }
+        }
+      }
+
       padding-top: 80px;
+
       .rowStart {
         .start {
           width: 100%;
@@ -67,6 +122,7 @@
 
             .randomTitle {
               left: -25px;
+
               &:hover {
                 transform: translateX(-50px) translateY(30px);
                 width: 250px;
@@ -107,10 +163,12 @@
 
         &:last-of-type {
           font-size: .8em;
+
           span {
             &:first-of-type {
               display: none;
             }
+
             &:last-of-type {
               display: block;
             }

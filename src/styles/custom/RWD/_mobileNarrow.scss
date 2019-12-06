@@ -42,6 +42,7 @@
   main {
     section.container {
       .row {
+        padding: 10px 0;
         .game {
           min-height: 230px;
           flex: 0 0 230px;
@@ -57,6 +58,67 @@
           }
           a {
             padding: 7px;
+          }
+        }
+
+        .big {
+          .left {
+            .leftUp {
+
+              .leftUpLeft {
+
+              }
+
+              .leftUpMiddle {
+              }
+
+              .leftUpRight {
+              }
+            }
+
+            .leftDown {
+            }
+          }
+
+          .right {
+
+            .rightTitle {
+
+              .bannerTop {
+                left: 11px;
+                top: -339px;
+                width: 230px;
+              }
+
+              .diceSmall {
+                display: none;
+              }
+            }
+
+            .rightUp {
+
+              .banner {
+                left: 11px;
+                width: 230px;
+              }
+            }
+
+            .rightDown {
+
+              .banner {
+                left: 11px;
+                width: 230px;
+              }
+            }
+
+            .game {
+              flex: 0 0 230px;
+              min-height: 230px;
+            }
+          }
+
+          .cancel {
+
           }
         }
       }

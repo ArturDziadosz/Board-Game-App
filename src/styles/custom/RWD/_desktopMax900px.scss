@@ -37,11 +37,86 @@
     section.container {
       padding-top: 60px;
 
+      .row {
+        .big {
+
+          .left {
+            .leftUp {
+              flex-wrap: wrap;
+              justify-content: center;
+              .leftUpLeft {
+                margin: 10px 100px 0;
+              }
+              .leftUpMiddle {
+                width: 45%;
+              }
+              .leftUpRight {
+                width: 45%;
+              }
+            }
+          }
+
+          .right {
+            padding-top: 140px;
+
+            .rightTitle {
+
+              .bannerTop {
+                top: -150px;
+                height: 60px;
+                font-size: 2em;
+              }
+
+              .diceSmall {
+                top: -150px;
+                left: calc(50% - 230px);
+                height: 60px;
+                width: 60px;
+                font-size: 2em;
+              }
+            }
+
+            .rightUp {
+
+              .banner {
+                top: -76px;
+                left: 20px;
+                height: 60px;
+                width: 250px;
+                font-size: 2em;
+              }
+            }
+
+            .rightDown {
+
+
+              .banner {
+                top: -76px;
+                left: 20px;
+                height: 60px;
+                width: 250px;
+                font-size: 2em;
+              }
+            }
+
+            .game {
+              flex: 0 0 250px;
+              min-height: 250px;
+            }
+          }
+
+          .cancel {
+
+          }
+        }
+      }
+
       .rowStart {
         width: 95%;
 
         .start {
         }
+
         .noMatch {
           height: 90px;
         }
@@ -121,6 +196,7 @@
       }
     }
   }
+
   footer {
     section.container {
 

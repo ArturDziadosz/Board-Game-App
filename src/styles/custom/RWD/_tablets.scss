@@ -68,12 +68,74 @@
     section.container {
       padding-top: 60px;
       .row {
+        padding: 20px 0;
         .game {
           min-height: 250px;
           flex: 0 0 250px;
         }
-        button {
-          &:last-of-type {
+        .big {
+          font-size: .8em;
+          .left {
+            .leftUp {
+
+              .leftUpLeft {
+
+              }
+              .leftUpMiddle {
+              }
+              .leftUpRight {
+              }
+            }
+          }
+
+          .right {
+            padding-top: 120px;
+
+            .rightTitle {
+
+              .bannerTop {
+                top: -130px;
+                left: calc(50% - 125px);
+                height: 50px;
+                width: 250px;
+              }
+
+              .diceSmall {
+                top: -130px;
+                left: calc(50% - 200px);
+                height: 50px;
+                width: 50px;
+              }
+            }
+
+            .rightUp {
+              flex: 0 0 48%;
+              justify-content: center;
+
+              .banner {
+                top: -66px;
+                left: 6px;
+                height: 50px;
+              }
+            }
+
+            .rightDown {
+              flex: 0 0 48%;
+              justify-content: center;
+
+              .banner {
+                top: -66px;
+                left: 6px;
+                height: 50px;
+              }
+            }
+
+            .game {
+              margin: 0;
+            }
+          }
+
+          .cancel {
 
           }
         }

@@ -42,6 +42,7 @@
   main {
     section.container {
       .row {
+        padding: 15px 0;
         .game {
         }
         button.more {
@@ -51,6 +52,64 @@
           }
           &:last-of-type {
             left: calc(50% + 80px);
+          }
+        }
+        .big {
+          .left {
+            .leftUp {
+
+              .leftUpLeft {
+
+              }
+
+              .leftUpMiddle {
+                width: 90%;
+              }
+
+              .leftUpRight {
+                width: 90%;
+              }
+            }
+
+            .leftDown {
+              padding: 20px;
+            }
+          }
+
+          .right {
+
+            .rightTitle {
+
+              .bannerTop {
+                left: 19px;
+              }
+
+              .diceSmall {
+                display: none;
+              }
+            }
+
+            .rightUp {
+
+              .banner {
+                left: 19px;
+              }
+            }
+
+            .rightDown {
+
+              .banner {
+                left: 19px;
+              }
+            }
+
+            .game {
+
+            }
+          }
+
+          .cancel {
+
           }
         }
       }
