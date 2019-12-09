@@ -17,12 +17,36 @@
             right: 71px;
           }
         }
+
+        .explanation {
+
+          &:first-of-type {
+            right: -3px;
+            bottom: -49px;
+          }
+
+          &:nth-of-type(2) {
+            right: 141px;
+            bottom: -49px;
+          }
+
+          &:last-of-type {
+            right: 32px;
+            bottom: -49px;
+          }
+
+
+          &::after {
+          }
+
+        }
       }
     }
   }
   main {
     section.container {
       .row {
+        padding-bottom: 35px;
         button {
           &:last-of-type {
             width: 65px;

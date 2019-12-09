@@ -17,6 +17,7 @@ footer {
       line-height: 1.1em;
       &:first-of-type {
         flex: 0 0 50%;
+        overflow: hidden;
       }
       a {
         color: $colorAnchor;

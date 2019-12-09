@@ -30,6 +30,29 @@
             right: 52px;
           }
         }
+        .explanation {
+          padding: 4px;
+
+          &:first-of-type {
+            right: -9px;
+            bottom: -37px;
+          }
+
+          &:nth-of-type(2) {
+            right: 100px;
+            bottom: -37px;
+          }
+
+          &:last-of-type {
+            right: 10px;
+            bottom: -37px;
+          }
+
+
+          &::after {
+          }
+
+        }
       }
     }
   }

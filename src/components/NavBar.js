@@ -47,6 +47,14 @@ class NavBar extends Component {
     e.currentTarget.classList.toggle("pressed");
   };
 
+  handleExplanationEnter = e => {
+    e.currentTarget.nextElementSibling.style.display = "block";
+  };
+
+  handleExplanationLeave = e => {
+    e.currentTarget.nextElementSibling.style.display = "none";
+  };
+
   render() {
     return (
       <>
@@ -55,9 +63,12 @@ class NavBar extends Component {
             <h2><a href={"#"} onClick={this.handleReload}>Board <span>Game</span> App</a></h2>
             <form onSubmit={this.handleSubmit} >
               <input id="placeholder" name={"gameName"} type={"text"} value={this.state.gameName} placeholder={(this.state.searchedName === "") ? `Search for awesome games!` : `You searched for: ${this.state.searchedName}`} onChange={this.handleChange}/>
-              <button><i className="fas fa-play"/></button>
-              <button onClick={this.handleClear}><i className="fas fa-square"/></button>
-              <button onClick={this.handleExact}><i className="fas fa-circle"/></button>
+              <button onMouseEnter={this.handleExplanationEnter} onMouseLeave={this.handleExplanationLeave}><i className="fas fa-play"/></button>
+              <div className={"explanation"} style={{display: "none"}}>Search</div>
+              <button onMouseEnter={this.handleExplanationEnter} onMouseLeave={this.handleExplanationLeave} onClick={this.handleClear}><i className="fas fa-square"/></button>
+              <div className={"explanation"} style={{display: "none"}}>Clear</div>
+              <button onMouseEnter={this.handleExplanationEnter} onMouseLeave={this.handleExplanationLeave} onClick={this.handleExact}><i className="fas fa-circle"/></button>
+              <div className={"explanation"} style={{display: "none"}}>Exact searching</div>
             </form>
           </section>
         </header>

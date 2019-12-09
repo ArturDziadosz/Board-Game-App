@@ -47,6 +47,29 @@
           &:hover {
           }
         }
+
+        .explanation {
+
+          &:first-of-type {
+            right: -9px;
+            bottom: -37px;
+          }
+
+          &:nth-of-type(2) {
+            right: 82px;
+            bottom: -37px;
+          }
+
+          &:last-of-type {
+            right: 1px;
+            bottom: -37px;
+          }
+
+
+          &::after {
+          }
+
+        }
       }
     }
   }
@@ -220,7 +243,7 @@
         &:first-of-type {
           display: block;
           padding: 30px 0 10px 0;
-          overflow: scroll;
+
         }
 
         &:nth-of-type(2) {

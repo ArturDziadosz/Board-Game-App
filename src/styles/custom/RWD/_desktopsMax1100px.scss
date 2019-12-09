@@ -28,13 +28,36 @@
             right: 58px;
           }
         }
+        .explanation {
+          padding: 7px;
+
+          &:first-of-type {
+            right: -9px;
+            bottom: -45px;
+          }
+
+          &:nth-of-type(2) {
+            right: 113px;
+            bottom: -45px;
+          }
+
+          &:last-of-type {
+            right: 18px;
+            bottom: -45px;
+          }
+
+
+          &::after {
+          }
+
+        }
       }
     }
   }
   main {
     section.container {
       .row {
-        padding: 25px 0;
+        padding: 25px 0 35px;
         .big {
 
           .left {

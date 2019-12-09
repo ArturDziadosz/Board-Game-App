@@ -36,13 +36,35 @@
           &:hover {
           }
         }
+        .explanation {
+
+          &:first-of-type {
+            right: -16px;
+            bottom: -37px;
+          }
+
+          &:nth-of-type(2) {
+            right: 52px;
+            bottom: -37px;
+          }
+
+          &:last-of-type {
+            right: -16px;
+            bottom: -37px;
+          }
+
+
+          &::after {
+          }
+
+        }
       }
     }
   }
   main {
     section.container {
       .row {
-        padding: 10px 0;
+        padding: 10px 0 35px;
         .game {
           min-height: 230px;
           flex: 0 0 230px;

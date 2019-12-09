@@ -61,6 +61,28 @@
             box-shadow: 7px 1px black, 6px 1px black, 5px 1px black, 4px 1px black, 3px 1px black, 2px 1px black, 1px 1px black;
           }
         }
+        .explanation {
+
+          &:first-of-type {
+            right: -9px;
+            bottom: -37px;
+          }
+
+          &:nth-of-type(2) {
+            right: 80px;
+            bottom: -37px;
+          }
+
+          &:last-of-type {
+            right: -1px;
+            bottom: -37px;
+          }
+
+
+          &::after {
+          }
+
+        }
       }
     }
   }
@@ -68,7 +90,7 @@
     section.container {
       padding-top: 60px;
       .row {
-        padding: 20px 0;
+        padding: 20px 0 35px;
         .game {
           min-height: 250px;
           flex: 0 0 250px;
