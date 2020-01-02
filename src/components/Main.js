@@ -221,7 +221,7 @@ class Main extends Component {
                       API</a>.</span> <br/>It has small features including: <span>most popular games, kickstarter games, random game, recommended
                     games.</span><br/> I hope you will enjoy it! May the best game be with you!
                   </div> :
-                  <div className={"col-16 noMatch"}><span>Upssssssssss :(</span> <br/> No matching criteria for searched
+                  <div className={"col-16 noMatch"}><span>Oopssssssssss :(</span> <br/> No matching criteria for searched
                     sentence: "{this.props.gameName}". <br/> If you are using exact search be aware of first letter in searched word it should be capitalized. <br/></div>}
 
                 <div className={"col-16 top3"}>
