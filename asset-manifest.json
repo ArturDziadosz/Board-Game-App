@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Board-Game-App/static/css/main.f14d0290.chunk.css",
-    "main.js": "/Board-Game-App/static/js/main.3199f4c6.chunk.js",
-    "main.js.map": "/Board-Game-App/static/js/main.3199f4c6.chunk.js.map",
+    "main.js": "/Board-Game-App/static/js/main.ad69783d.chunk.js",
+    "main.js.map": "/Board-Game-App/static/js/main.ad69783d.chunk.js.map",
     "runtime-main.js": "/Board-Game-App/static/js/runtime-main.1be17494.js",
     "runtime-main.js.map": "/Board-Game-App/static/js/runtime-main.1be17494.js.map",
     "static/js/2.55c530c4.chunk.js": "/Board-Game-App/static/js/2.55c530c4.chunk.js",
     "static/js/2.55c530c4.chunk.js.map": "/Board-Game-App/static/js/2.55c530c4.chunk.js.map",
     "index.html": "/Board-Game-App/index.html",
-    "precache-manifest.a2b040f2b2234d150755cb6a9e9b2562.js": "/Board-Game-App/precache-manifest.a2b040f2b2234d150755cb6a9e9b2562.js",
+    "precache-manifest.7f60a918d0599daf64f2e5a5099a256e.js": "/Board-Game-App/precache-manifest.7f60a918d0599daf64f2e5a5099a256e.js",
     "service-worker.js": "/Board-Game-App/service-worker.js",
     "static/css/main.f14d0290.chunk.css.map": "/Board-Game-App/static/css/main.f14d0290.chunk.css.map",
     "static/media/Main.scss": "/Board-Game-App/static/media/dice-five-solid.276ff9ff.svg"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.1be17494.js",
     "static/js/2.55c530c4.chunk.js",
     "static/css/main.f14d0290.chunk.css",
-    "static/js/main.3199f4c6.chunk.js"
+    "static/js/main.ad69783d.chunk.js"
   ]
 }
