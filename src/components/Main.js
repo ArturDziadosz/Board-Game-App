@@ -170,7 +170,7 @@ class Main extends Component {
       })
     }).catch(err => console.log(err));
 
-    fetch(`${this.props.api}&kickstarter=true&limit=2&order_by=deadline`).then(resp => {
+    fetch(`${this.props.api}&kickstarter=true&limit=7&order_by=deadline`).then(resp => {
       if (resp.ok) {
         return resp.json();
       } else {

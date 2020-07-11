@@ -6,7 +6,7 @@ import Footer from './components/Footer';
 class App extends Component {
   state = {
     gameName: "",
-    api: "https://www.boardgameatlas.com/api/search?client_id=GNWr07oYDD",
+    api: "https://api.boardgameatlas.com/api/search?client_id=GNWr07oYDD",
     data: false,
     skip: 0,
     isExact: false,
