@@ -197,8 +197,9 @@ class Main extends Component {
         throw new Error("Connection problem");
       }
     }).then(data => {
+      console.log(data.games[0].images);
       this.setState({
-        random: data.game
+        random: data.games
       })
     }).catch(err => console.log(err));
 
@@ -243,9 +244,9 @@ class Main extends Component {
                     {
                       !this.state.random ? <div className={"col-16 rotate"} style={{display: "flex", justifyContent: "center", alignItems: "center", height: "300px", fontSize: "10em"}}>
                         <i className="fas fa-dice-five" style={{color: "#123456"}}></i></div> : <div className={"col-10 game"} onClick={this.handleMakeBig}
-                                                            style={{backgroundImage: `url(${this.state.random.images.medium})`}}>{this.state.random.year_published ?
-                        <p>{this.state.random.name} ({this.state.random.year_published})</p> :
-                        <p>{this.state.random.name}</p>}</div>
+                                                            style={{backgroundImage: `url(${this.state.random[0].images.medium})`}}>{this.state.random[0].year_published ?
+                        <p>{this.state.random[0].name} ({this.state.random[0].year_published})</p> :
+                        <p>{this.state.random[0].name}</p>}</div>
                     }
                   </div>
                 </div>
